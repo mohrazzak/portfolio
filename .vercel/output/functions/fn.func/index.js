@@ -547,8 +547,8 @@ var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
-    imports = ["_app/immutable/nodes/0.e82ae5cf.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
-    stylesheets = ["_app/immutable/assets/0.d5295edc.css"];
+    imports = ["_app/immutable/nodes/0.3a82a0d7.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
+    stylesheets = ["_app/immutable/assets/0.31f4626c.css"];
     fonts = [];
   }
 });
@@ -606,7 +606,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.f7122835.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.3ea254ec.js"];
+    imports2 = ["_app/immutable/nodes/1.03c9e756.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.edc477f8.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -625,7 +625,7 @@ var init_page_svelte = __esm({
       let { step } = $$props;
       if ($$props.step === void 0 && $$bindings.step && step !== void 0)
         $$bindings.step(step);
-      return `<a${add_attribute("href", step.href, 0)} target="_blank" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center cursor-pointer group hover:border-violet-400 duration-200"><div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"><i${add_attribute("class", step.icon, 0)}></i></div> <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">${escape(step.name)}</h3> ${slots.default ? slots.default({}) : ``} <div class="flex-1 flex justify-betweeen gap-4 items-end"><div class="ml-auto cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:bg-white after:w-full after:h-full after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"><a class="z-4"${add_attribute("href", step.link, 0)} target="_blank">Go to Website\u2192</a></div></div></a>`;
+      return `<div target="_blank" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center group hover:border-violet-400 duration-200"><div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"><i${add_attribute("class", step.icon, 0)}></i></div> <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">${escape(step.name)}</h3> ${slots.default ? slots.default({}) : ``} <div class="flex-1 flex justify-betweeen gap-4 items-end"><div class="ml-auto cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:bg-white after:w-full after:h-full after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"><a class="z-4"${add_attribute("href", step.link, 0)} target="_blank">Go to Website\u2192</a></div></div></div>`;
     });
     Main = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let steps = [
@@ -703,7 +703,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.41be564e.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
+    imports3 = ["_app/immutable/nodes/2.3960a4e1.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -811,7 +811,7 @@ var options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="icon" href="' + assets2 + '/favicon.svg" />\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n    <script\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    ><\/script>\n    <link\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\n      rel="stylesheet"\n    />\n    <link\n      rel="stylesheet"\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    />\n    <meta name="viewport" content="width=device-width" />\n    <title>Mohammad Abdalrazzak</title>\n    <meta\n      name="description"\n      content="Hire Mohammad Abdalrazzak, a skilled backend developer. Download his CV, resume, and portfolio to learn more."\n    />\n\n    ' + head + '\n  </head>\n\n  <body\n    data-sveltekit-preload-data="hover"\n    class="bg-slate-950 text-white relative"\n  >\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="icon" href="' + assets2 + '/favicon.png" />\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n    <script\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    ><\/script>\n    <link\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\n      rel="stylesheet"\n    />\n    <link\n      rel="stylesheet"\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    />\n    <meta name="viewport" content="width=device-width" />\n    <title>Mohammad Abdalrazzak</title>\n    <meta\n      name="description"\n      content="Hire Mohammad Abdalrazzak, a skilled backend developer. Download his CV, resume, and portfolio to learn more."\n    />\n\n    ' + head + '\n  </head>\n\n  <body\n    data-sveltekit-preload-data="hover"\n    class="bg-slate-950 text-white relative"\n  >\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>
 
     <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">
       <div id="particles-js" class="absolute inset-0" />
@@ -885,7 +885,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "ysqixf"
+  version_hash: "1hx4bb"
 };
 function get_hooks() {
   return {};
@@ -4280,10 +4280,10 @@ var manifest = (() => {
   return {
     appDir: "_app",
     appPath: "_app",
-    assets: /* @__PURE__ */ new Set(["assets/particles.json", "assets/profile2.png", "favicon.svg", "images/profile2.png", "Mohammad-Abdalrazzak-Resume-2024-04-23.pdf", "Mohammad-Abdalrazzak.pdf", "profile.png"]),
-    mimeTypes: { ".json": "application/json", ".png": "image/png", ".svg": "image/svg+xml", ".pdf": "application/pdf" },
+    assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak-Resume-2024-04-23.pdf", "Mohammad-Abdalrazzak.pdf"]),
+    mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.7dff1358.js", "app": "_app/immutable/entry/app.290e21ad.js", "imports": ["_app/immutable/entry/start.7dff1358.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.3ea254ec.js", "_app/immutable/entry/app.290e21ad.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.cde08273.js", "app": "_app/immutable/entry/app.97c5cce9.js", "imports": ["_app/immutable/entry/start.cde08273.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.edc477f8.js", "_app/immutable/entry/app.97c5cce9.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
