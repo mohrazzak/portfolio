@@ -84,6 +84,10 @@ function scrollToTouchSection() {
                 src={"images/profile2.png"}
                 alt="Portrait of Mohammad Abdalrazzak smiling"
     class="object-cover z-[2] max-h-[65vh] "
+    srcset={"images/profile2.png 1280w"}
+    loading="lazy"
+    decoding="async"
+
             />
         </div>
     </section>

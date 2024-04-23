@@ -2,10 +2,9 @@
     export let step;
 </script>
 
-<a
-    href={step.href}
+<div
     target="_blank"
-    class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center cursor-pointer group hover:border-violet-400 duration-200"
+    class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center group hover:border-violet-400 duration-200"
 >
     <div
         class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"
@@ -20,7 +19,7 @@
         <div
             class="ml-auto cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:bg-white after:w-full after:h-full after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"
         >
-            <a class="z-4" href={step.link}>Go to Website&rarr;</a>
+            <a class="z-4" href={step.link} target="_blank">Go to Website&rarr;</a>
         </div>
     </div>
-</a>
+</div>

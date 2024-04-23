@@ -606,7 +606,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.97ce5447.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.abbb9dc9.js"];
+    imports2 = ["_app/immutable/nodes/1.f7122835.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.3ea254ec.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -625,7 +625,7 @@ var init_page_svelte = __esm({
       let { step } = $$props;
       if ($$props.step === void 0 && $$bindings.step && step !== void 0)
         $$bindings.step(step);
-      return `<a${add_attribute("href", step.href, 0)} target="_blank" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center cursor-pointer group hover:border-violet-400 duration-200"><div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"><i${add_attribute("class", step.icon, 0)}></i></div> <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">${escape(step.name)}</h3> ${slots.default ? slots.default({}) : ``} <div class="flex-1 flex justify-betweeen gap-4 items-end"><div class="ml-auto cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:bg-white after:w-full after:h-full after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"><a class="z-4"${add_attribute("href", step.link, 0)}>Go to Website\u2192</a></div></div></a>`;
+      return `<a${add_attribute("href", step.href, 0)} target="_blank" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center cursor-pointer group hover:border-violet-400 duration-200"><div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"><i${add_attribute("class", step.icon, 0)}></i></div> <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">${escape(step.name)}</h3> ${slots.default ? slots.default({}) : ``} <div class="flex-1 flex justify-betweeen gap-4 items-end"><div class="ml-auto cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:bg-white after:w-full after:h-full after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"><a class="z-4"${add_attribute("href", step.link, 0)} target="_blank">Go to Website\u2192</a></div></div></a>`;
     });
     Main = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let steps = [
@@ -667,7 +667,7 @@ var init_page_svelte = __esm({
       return `<main class="flex flex-col flex-1 p-4"><section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"><div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"><h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl" data-svelte-h="svelte-xa81s0">Hi! I&#39;m<br> <span class="poppins text-violet-400">Mohammad</span> Abdalrazzak
                 <br>Full Stack
                 <span class="poppins text-violet-400">Developer</span></h2> <p class="text-base sm:text-lg md:text-xl" data-svelte-h="svelte-gyfurs">My <span class="text-violet-400">favorite tech</span> includes TypeScript
-                (Nest.js or Express.js), Node.js &amp; (React or SvelteKit) &amp; MySQL &amp; Prisma!</p> <button id="contact-button" class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950" data-svelte-h="svelte-1hw08sk"><div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div> <h4 class="relative z-9">Get in touch \u2192</h4></button></div> <div class="relative shadow-2xl place-items-center hidden md:grid" data-svelte-h="svelte-1d36xw5"><img${add_attribute("src", "images/profile2.png", 0)} alt="Portrait of Mohammad Abdalrazzak smiling" class="object-cover z-[2] max-h-[65vh] "></div></section> <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects"><div class="flex flex-col gap-2 text-center" data-svelte-h="svelte-ilbkv3"><h6 class="text-large sm:text-xl md:text-2xl">A few of my creative endeavors.</h6> <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Curious to <span class="poppins text-violet-400">see</span> my work?</h3></div> <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">${validate_component(Step, "Step").$$render($$result, { step: steps[0] }, {}, {
+                (Nest.js or Express.js), Node.js &amp; (React or SvelteKit) &amp; MySQL &amp; Prisma!</p> <button id="contact-button" class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950" data-svelte-h="svelte-1hw08sk"><div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div> <h4 class="relative z-9">Get in touch \u2192</h4></button></div> <div class="relative shadow-2xl place-items-center hidden md:grid" data-svelte-h="svelte-z56jiu"><img${add_attribute("src", "images/profile2.png", 0)} alt="Portrait of Mohammad Abdalrazzak smiling" class="object-cover z-[2] max-h-[65vh] "${add_attribute("srcset", "images/profile2.png 1280w", 0)} loading="lazy" decoding="async"></div></section> <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects"><div class="flex flex-col gap-2 text-center" data-svelte-h="svelte-ilbkv3"><h6 class="text-large sm:text-xl md:text-2xl">A few of my creative endeavors.</h6> <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Curious to <span class="poppins text-violet-400">see</span> my work?</h3></div> <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">${validate_component(Step, "Step").$$render($$result, { step: steps[0] }, {}, {
         default: () => {
           return `<p data-svelte-h="svelte-1j2kp3q">Built a platform for students in Turkey to search for universities and educational opportunities. Utilized <strong class="text-violet-400">Node.js , MySQL, and Express.js</strong> for a dynamic platform with a control panel (180degreesacademy.net).</p>`;
         }
@@ -703,7 +703,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.08b0ac52.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
+    imports3 = ["_app/immutable/nodes/2.41be564e.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -885,7 +885,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1wz88zc"
+  version_hash: "ysqixf"
 };
 function get_hooks() {
   return {};
@@ -4283,7 +4283,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "assets/profile2.png", "favicon.svg", "images/profile2.png", "Mohammad-Abdalrazzak-Resume-2024-04-23.pdf", "Mohammad-Abdalrazzak.pdf", "profile.png"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".svg": "image/svg+xml", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.d256b050.js", "app": "_app/immutable/entry/app.97aedfff.js", "imports": ["_app/immutable/entry/start.d256b050.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.abbb9dc9.js", "_app/immutable/entry/app.97aedfff.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.7dff1358.js", "app": "_app/immutable/entry/app.290e21ad.js", "imports": ["_app/immutable/entry/start.7dff1358.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.3ea254ec.js", "_app/immutable/entry/app.290e21ad.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
