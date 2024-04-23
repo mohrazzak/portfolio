@@ -519,7 +519,7 @@ var init_layout_svelte = __esm({
         0
       )}><h1 class="font-medium" data-svelte-h="svelte-1usa8l"><b class="font-bold poppins">Mohammad</b> <span class="">Abdalrazzak</span></h1> <div class="sm:flex items-center gap-4 hidden">${each(tabs, (tab, index4) => {
         return `<a${add_attribute("href", tab.link, 0)} class="duration-200 hover:text-violet-400"${add_attribute("target", index4 === 2 ? "_blank" : "", 0)}><p>${escape(tab.name)}</p> </a>`;
-      })} <button class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full cursor-pointer bg-white text-slate-950" data-svelte-h="svelte-1p17vu8"><div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div> <p class="relative z-9">Download CV</p></button></div></header>`;
+      })}</div> <button class="blueShadow relative overflow-hidden px-5 py-2 group rounded-full cursor-pointer bg-white text-slate-950" data-svelte-h="svelte-1p17vu8"><div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div> <p class="relative z-9">Download CV</p></button></header>`;
     });
     Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let y;
@@ -547,7 +547,7 @@ var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
-    imports = ["_app/immutable/nodes/0.3a82a0d7.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
+    imports = ["_app/immutable/nodes/0.f80d3910.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
     stylesheets = ["_app/immutable/assets/0.31f4626c.css"];
     fonts = [];
   }
@@ -606,7 +606,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.03c9e756.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.edc477f8.js"];
+    imports2 = ["_app/immutable/nodes/1.d5cf50e8.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.3d08a391.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -646,7 +646,7 @@ var init_page_svelte = __esm({
           name: "QBite eMenu System (CEO & Backend Engineer)",
           icon: "fa-solid fa-recycle",
           description: "Led the development of an eco-friendly e-menu system replacing paper menus at restaurants. Built with Node.js, NestJS, MySQL, and Prisma. Ensured scalability, multi-language support, and seamless integration with the frontend (q-bite.net).",
-          link: "https://qbite.net/"
+          link: "https://q-bite.net/"
         }
       ];
       let benefits = [
@@ -703,7 +703,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.3960a4e1.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
+    imports3 = ["_app/immutable/nodes/2.1e12073f.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -885,7 +885,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1hx4bb"
+  version_hash: "iclp3k"
 };
 function get_hooks() {
   return {};
@@ -4283,7 +4283,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak-Resume-2024-04-23.pdf", "Mohammad-Abdalrazzak.pdf"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.cde08273.js", "app": "_app/immutable/entry/app.97c5cce9.js", "imports": ["_app/immutable/entry/start.cde08273.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.edc477f8.js", "_app/immutable/entry/app.97c5cce9.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.350187c3.js", "app": "_app/immutable/entry/app.547eaa92.js", "imports": ["_app/immutable/entry/start.350187c3.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.3d08a391.js", "_app/immutable/entry/app.547eaa92.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
