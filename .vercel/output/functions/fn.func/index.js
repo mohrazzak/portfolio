@@ -606,7 +606,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.74a58589.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.9143964c.js"];
+    imports2 = ["_app/immutable/nodes/1.aabdbc43.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.10192b73.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -811,18 +811,18 @@ var options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="icon" href="' + assets2 + '/favicon.png" />\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n    <script\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    ><\/script>\n    <link\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\n      rel="stylesheet"\n    />\n    <link\n      rel="stylesheet"\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    />\n    <meta name="viewport" content="width=device-width" />\n    <title>Mohammad Abdalrazzak</title>\n    <meta\n      name="description"\n      content="Hire Mohammad Abdalrazzak, a skilled backend developer. Download his CV, resume, and portfolio to learn more."\n    />\n\n    ' + head + '\n  </head>\n\n  <body\n    data-sveltekit-preload-data="hover"\n    class="bg-slate-950 text-white relative"\n  >\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>
-
-    <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">
-      <div id="particles-js" class="absolute inset-0" />
-    </div>
-    <script>
-      particlesJS.load('particles-js', 'assets/particles.json', function () {
-        console.log('callback - particles.js config loaded');
-      });
-    <\/script>
-  </body>
-</html>
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n  <head>\r\n    <meta charset="utf-8" />\r\n    <link rel="icon" href="' + assets2 + '/favicon.png" />\r\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\r\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\r\n    <script\r\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\r\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\r\n      crossorigin="anonymous"\r\n      referrerpolicy="no-referrer"\r\n    ><\/script>\r\n    <link\r\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\r\n      rel="stylesheet"\r\n    />\r\n    <link\r\n      rel="stylesheet"\r\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\r\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\r\n      crossorigin="anonymous"\r\n      referrerpolicy="no-referrer"\r\n    />\r\n    <meta name="viewport" content="width=device-width" />\r\n    <title>Mohammad Abdalrazzak</title>\r\n    <meta\r\n      name="description"\r\n      content="Hire Mohammad Abdalrazzak, a skilled backend developer. Download his CV, resume, and portfolio to learn more."\r\n    />\r\n\r\n    ' + head + '\r\n  </head>\r\n\r\n  <body\r\n    data-sveltekit-preload-data="hover"\r\n    class="bg-slate-950 text-white relative"\r\n  >\r\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>\r
+\r
+    <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">\r
+      <div id="particles-js" class="absolute inset-0" />\r
+    </div>\r
+    <script>\r
+      particlesJS.load('particles-js', 'assets/particles.json', function () {\r
+        console.log('callback - particles.js config loaded');\r
+      });\r
+    <\/script>\r
+  </body>\r
+</html>\r
 `,
     error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
@@ -885,7 +885,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1nyqiie"
+  version_hash: "195k29f"
 };
 function get_hooks() {
   return {};
@@ -4280,10 +4280,10 @@ var manifest = (() => {
   return {
     appDir: "_app",
     appPath: "_app",
-    assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak-Resume-2024-04-23.pdf", "Mohammad-Abdalrazzak.pdf"]),
+    assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak.pdf"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.c99f4142.js", "app": "_app/immutable/entry/app.e71e6279.js", "imports": ["_app/immutable/entry/start.c99f4142.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.9143964c.js", "_app/immutable/entry/app.e71e6279.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.f213c3de.js", "app": "_app/immutable/entry/app.48bd7e00.js", "imports": ["_app/immutable/entry/start.f213c3de.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.10192b73.js", "_app/immutable/entry/app.48bd7e00.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
