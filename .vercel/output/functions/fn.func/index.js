@@ -606,7 +606,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.99594c8c.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/stores.9bb463c2.js", "_app/immutable/chunks/singletons.64584f3a.js"];
+    imports2 = ["_app/immutable/nodes/1.b7cee06e.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/stores.0b303b0d.js", "_app/immutable/chunks/singletons.5c8889f3.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -750,7 +750,9 @@ var init_page_svelte = __esm({
           description: "The ever-evolving world of technology excites me! I possess a natural curiosity and an insatiable hunger to learn new things. My self-taught journey is a testament to this; I devour online resources, actively seek out learning opportunities, and possess the ability to grasp new concepts quickly. This rapid learning allows me to stay at the forefront of the industry, constantly adapting and growing as a developer."
         }
       ];
-      return `<main class="flex flex-col flex-1 p-4"><section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"><div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"><h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl" data-svelte-h="svelte-1y5jrpa">Hi! I&#39;m<br> <h1><span class="poppins text-violet-400 m-0 p-0">Mohammad</span> Abdalrazzak</h1> <br>Full Stack
+      return `<main class="flex flex-col flex-1 p-4"><section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"><div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"><h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl" data-svelte-h="svelte-1r5k39a">Hi! I&#39;m<br> <span class="poppins text-violet-400">Mohammad</span> Abdalrazzak
+                <br>Full Stack
+                <h1><span class="poppins text-violet-400 m-0 p-0">Mohammad</span> Abdalrazzak</h1> <br>Full Stack
                 <span class="poppins text-violet-400">Developer</span></h2> <p class="text-base sm:text-lg md:text-xl" data-svelte-h="svelte-gyfurs">My <span class="text-violet-400">favorite tech</span> includes TypeScript
                 (Nest.js or Express.js), Node.js &amp; (React or SvelteKit) &amp; MySQL &amp; Prisma!</p> <button id="contact-button" class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950" data-svelte-h="svelte-1hw08sk"><div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div> <h4 class="relative z-9">Get in touch \u2192</h4></button></div> <div class="relative shadow-2xl place-items-center hidden md:grid" data-svelte-h="svelte-z56jiu"><img${add_attribute("src", "images/profile2.png", 0)} alt="Portrait of Mohammad Abdalrazzak smiling" class="object-cover z-[2] max-h-[65vh] "${add_attribute("srcset", "images/profile2.png 1280w", 0)} loading="lazy" decoding="async"></div></section> <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects"><div class="flex flex-col gap-2 text-center" data-svelte-h="svelte-ilbkv3"><h6 class="text-large sm:text-xl md:text-2xl">A few of my creative endeavors.</h6> <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Curious to <span class="poppins text-violet-400">see</span> my work?</h3></div> <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">${validate_component(Step, "Step").$$render($$result, { step: steps[0] }, {}, {
         default: () => {
@@ -788,7 +790,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.a169f37e.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.9bb463c2.js", "_app/immutable/chunks/singletons.64584f3a.js"];
+    imports3 = ["_app/immutable/nodes/2.9bc151d1.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.0b303b0d.js", "_app/immutable/chunks/singletons.5c8889f3.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -970,7 +972,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1c0ttf"
+  version_hash: "kqqdp1"
 };
 function get_hooks() {
   return {};
@@ -4368,7 +4370,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak.pdf"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.af910cbc.js", "app": "_app/immutable/entry/app.1d84c211.js", "imports": ["_app/immutable/entry/start.af910cbc.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.64584f3a.js", "_app/immutable/entry/app.1d84c211.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.ddeec288.js", "app": "_app/immutable/entry/app.8514fee1.js", "imports": ["_app/immutable/entry/start.ddeec288.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.5c8889f3.js", "_app/immutable/entry/app.8514fee1.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),

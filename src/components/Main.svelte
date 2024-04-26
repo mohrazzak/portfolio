@@ -67,8 +67,9 @@ function scrollToTouchSection() {
         <div
             class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
         >
-            <h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl">
-                Hi! I'm<br /> 
+              <h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl">
+                Hi! I'm<br /> <span class="poppins text-violet-400">Mohammad</span> Abdalrazzak
+                <br />Full Stack
                 <h1><span class="poppins text-violet-400 m-0 p-0">Mohammad</span> Abdalrazzak</h1>
                 <br />Full Stack
                 <span class="poppins text-violet-400">Developer</span>
