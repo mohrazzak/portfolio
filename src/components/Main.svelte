@@ -1,6 +1,9 @@
 <script>
     import Step from "./Step.svelte";
 import { inject } from '@vercel/analytics'
+import { injectSpeedInsights } from '@vercel/speed-insights/sveltekit';
+
+injectSpeedInsights();
     inject({mode:  'production'});
 
  let steps = [
@@ -65,7 +68,8 @@ function scrollToTouchSection() {
             class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"
         >
             <h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl">
-                Hi! I'm<br /> <span class="poppins text-violet-400">Mohammad</span> Abdalrazzak
+                Hi! I'm<br /> 
+                <h1><span class="poppins text-violet-400 m-0 p-0">Mohammad</span> Abdalrazzak</h1>
                 <br />Full Stack
                 <span class="poppins text-violet-400">Developer</span>
             </h2>
