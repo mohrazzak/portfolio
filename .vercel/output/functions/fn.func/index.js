@@ -13,8 +13,8 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 var __export = (target, all) => {
-  for (var name in all)
-    __defProp(target, name, { get: all[name], enumerable: true });
+  for (var name2 in all)
+    __defProp(target, name2, { get: all[name2], enumerable: true });
 };
 var __copyProps = (to, from, except, desc) => {
   if (from && typeof from === "object" || typeof from === "function") {
@@ -120,12 +120,12 @@ function each(items, fn) {
   }
   return str;
 }
-function validate_component(component4, name) {
+function validate_component(component4, name2) {
   if (!component4 || !component4.$$render) {
-    if (name === "svelte:component")
-      name += " this={...}";
+    if (name2 === "svelte:component")
+      name2 += " this={...}";
     throw new Error(
-      `<${name}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules. Otherwise you may need to fix a <${name}>.`
+      `<${name2}> is not a valid SSR component. You may need to review your build config to ensure that dependencies are compiled, rather than imported as pre-compiled modules. Otherwise you may need to fix a <${name2}>.`
     );
   }
   return component4;
@@ -166,11 +166,11 @@ function create_ssr_component(fn) {
     $$render
   };
 }
-function add_attribute(name, value, boolean) {
+function add_attribute(name2, value, boolean) {
   if (value == null || boolean && !value)
     return "";
   const assignment = boolean && value === true ? "" : `="${escape(value, true)}"`;
-  return ` ${name}${assignment}`;
+  return ` ${name2}${assignment}`;
 }
 var current_component, ATTR_REGEX, CONTENT_REGEX, missing_component, on_destroy;
 var init_ssr = __esm({
@@ -223,20 +223,20 @@ var require_cookie = __commonJS({
       }
       return obj;
     }
-    function serialize2(name, val, options2) {
+    function serialize2(name2, val, options2) {
       var opt = options2 || {};
       var enc = opt.encode || encode2;
       if (typeof enc !== "function") {
         throw new TypeError("option encode is invalid");
       }
-      if (!fieldContentRegExp.test(name)) {
+      if (!fieldContentRegExp.test(name2)) {
         throw new TypeError("argument name is invalid");
       }
       var value = enc(val);
       if (value && !fieldContentRegExp.test(value)) {
         throw new TypeError("argument val is invalid");
       }
-      var str = name + "=" + value;
+      var str = name2 + "=" + value;
       if (null != opt.maxAge) {
         var maxAge = opt.maxAge - 0;
         if (isNaN(maxAge) || !isFinite(maxAge)) {
@@ -341,7 +341,7 @@ var require_set_cookie = __commonJS({
       var parts = setCookieValue.split(";").filter(isNonEmptyString);
       var nameValuePairStr = parts.shift();
       var parsed = parseNameValuePair(nameValuePairStr);
-      var name = parsed.name;
+      var name2 = parsed.name;
       var value = parsed.value;
       options2 = options2 ? Object.assign({}, defaultParseOptions, options2) : defaultParseOptions;
       try {
@@ -353,7 +353,7 @@ var require_set_cookie = __commonJS({
         );
       }
       var cookie = {
-        name,
+        name: name2,
         value
       };
       parts.forEach(function(part) {
@@ -377,16 +377,16 @@ var require_set_cookie = __commonJS({
       return cookie;
     }
     function parseNameValuePair(nameValuePairStr) {
-      var name = "";
+      var name2 = "";
       var value = "";
       var nameValueArr = nameValuePairStr.split("=");
       if (nameValueArr.length > 1) {
-        name = nameValueArr.shift();
+        name2 = nameValueArr.shift();
         value = nameValueArr.join("=");
       } else {
         value = nameValuePairStr;
       }
-      return { name, value };
+      return { name: name2, value };
     }
     function parse3(input, options2) {
       options2 = options2 ? Object.assign({}, defaultParseOptions, options2) : defaultParseOptions;
@@ -606,9 +606,93 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.2a2f83f8.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.ccb8fcfd.js"];
+    imports2 = ["_app/immutable/nodes/1.959ca26f.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/singletons.6b735061.js"];
     stylesheets2 = [];
     fonts2 = [];
+  }
+});
+
+// node_modules/@vercel/analytics/dist/index.mjs
+function isBrowser() {
+  return typeof window !== "undefined";
+}
+function detectEnvironment() {
+  try {
+    const env = "development";
+    if (env === "development" || env === "test") {
+      return "development";
+    }
+  } catch (e) {
+  }
+  return "production";
+}
+function setMode(mode = "auto") {
+  if (mode === "auto") {
+    window.vam = detectEnvironment();
+    return;
+  }
+  window.vam = mode;
+}
+function getMode() {
+  const mode = isBrowser() ? window.vam : detectEnvironment();
+  return mode || "production";
+}
+function isDevelopment() {
+  return getMode() === "development";
+}
+function inject(props = {
+  debug: true
+}) {
+  var _a;
+  if (!isBrowser())
+    return;
+  setMode(props.mode);
+  initQueue();
+  if (props.beforeSend) {
+    (_a = window.va) == null ? void 0 : _a.call(window, "beforeSend", props.beforeSend);
+  }
+  const src = props.scriptSrc || (isDevelopment() ? DEV_SCRIPT_URL : PROD_SCRIPT_URL);
+  if (document.head.querySelector(`script[src*="${src}"]`))
+    return;
+  const script = document.createElement("script");
+  script.src = src;
+  script.defer = true;
+  script.dataset.sdkn = name + (props.framework ? `/${props.framework}` : "");
+  script.dataset.sdkv = version;
+  if (props.disableAutoTrack) {
+    script.dataset.disableAutoTrack = "1";
+  }
+  if (props.endpoint) {
+    script.dataset.endpoint = props.endpoint;
+  }
+  if (props.dsn) {
+    script.dataset.dsn = props.dsn;
+  }
+  script.onerror = () => {
+    const errorMessage = isDevelopment() ? "Please check if any ad blockers are enabled and try again." : "Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information.";
+    console.log(
+      `[Vercel Web Analytics] Failed to load script from ${src}. ${errorMessage}`
+    );
+  };
+  if (isDevelopment() && props.debug === false) {
+    script.dataset.debug = "false";
+  }
+  document.head.appendChild(script);
+}
+var name, version, initQueue, DEV_SCRIPT_URL, PROD_SCRIPT_URL;
+var init_dist = __esm({
+  "node_modules/@vercel/analytics/dist/index.mjs"() {
+    name = "@vercel/analytics";
+    version = "1.2.2";
+    initQueue = () => {
+      if (window.va)
+        return;
+      window.va = function a(...params) {
+        (window.vaq = window.vaq || []).push(params);
+      };
+    };
+    DEV_SCRIPT_URL = "https://va.vercel-scripts.com/v1/script.debug.js";
+    PROD_SCRIPT_URL = "/_vercel/insights/script.js";
   }
 });
 
@@ -621,6 +705,7 @@ var Step, Main, Page;
 var init_page_svelte = __esm({
   ".svelte-kit/output/server/entries/pages/_page.svelte.js"() {
     init_ssr();
+    init_dist();
     Step = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       let { step } = $$props;
       if ($$props.step === void 0 && $$bindings.step && step !== void 0)
@@ -628,6 +713,7 @@ var init_page_svelte = __esm({
       return `<div target="_blank" class="p-4 sm:p-6 md:p-8 flex flex-col gap-4 rounded-lg border border-solid border-violet-700 text-center group hover:border-violet-400 duration-200"><div class="bg-slate-950 grid place-items-center px-4 text-5xl md:text-6xl -mt-10 sm:-mt-12 md:-mt-14 lg:-mt-16 mx-auto duration-200"><i${add_attribute("class", step.icon, 0)}></i></div> <h3 class="font-medium text-xl sm:text-2xl md:text-3xl">${escape(step.name)}</h3> ${slots.default ? slots.default({}) : ``} <div class="flex-1 flex justify-betweeen gap-4 items-end"><div class="ml-auto cursor-pointer hover:text-slate-950 duration-200 relative after:absolute after:top-0 after:h-0 after:right-full after:bg-white after:w-full after:h-full after:duration-200 hover:after:translate-x-full after:z-[-1] overflow-hidden"><a class="z-4"${add_attribute("href", step.link, 0)} target="_blank">Go to Website\u2192</a></div></div></div>`;
     });
     Main = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+      inject();
       let steps = [
         {
           name: "Turkish University Platform (Backend Engineer)",
@@ -703,7 +789,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.1e12073f.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
+    imports3 = ["_app/immutable/nodes/2.4ceb1eb5.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js", "_app/immutable/chunks/each.e59479a4.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -885,7 +971,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "10yfos6"
+  version_hash: "x2jt0d"
 };
 function get_hooks() {
   return {};
@@ -1093,8 +1179,8 @@ function uneval(value, replacer) {
     const params = [];
     const statements = [];
     const values = [];
-    names.forEach((name, thing) => {
-      params.push(name);
+    names.forEach((name2, thing) => {
+      params.push(name2);
       if (custom.has(thing)) {
         values.push(
           /** @type {string} */
@@ -1122,19 +1208,19 @@ function uneval(value, replacer) {
         case "Array":
           values.push(`Array(${thing.length})`);
           thing.forEach((v, i) => {
-            statements.push(`${name}[${i}]=${stringify2(v)}`);
+            statements.push(`${name2}[${i}]=${stringify2(v)}`);
           });
           break;
         case "Set":
           values.push(`new Set`);
           statements.push(
-            `${name}.${Array.from(thing).map((v) => `add(${stringify2(v)})`).join(".")}`
+            `${name2}.${Array.from(thing).map((v) => `add(${stringify2(v)})`).join(".")}`
           );
           break;
         case "Map":
           values.push(`new Map`);
           statements.push(
-            `${name}.${Array.from(thing).map(([k, v]) => `set(${stringify2(k)}, ${stringify2(v)})`).join(".")}`
+            `${name2}.${Array.from(thing).map(([k, v]) => `set(${stringify2(k)}, ${stringify2(v)})`).join(".")}`
           );
           break;
         default:
@@ -1143,7 +1229,7 @@ function uneval(value, replacer) {
           );
           Object.keys(thing).forEach((key2) => {
             statements.push(
-              `${name}${safe_prop(key2)}=${stringify2(thing[key2])}`
+              `${name2}${safe_prop(key2)}=${stringify2(thing[key2])}`
             );
           });
       }
@@ -1157,12 +1243,12 @@ function uneval(value, replacer) {
   }
 }
 function get_name(num) {
-  let name = "";
+  let name2 = "";
   do {
-    name = chars[num % chars.length] + name;
+    name2 = chars[num % chars.length] + name2;
     num = ~~(num / chars.length) - 1;
   } while (num >= 0);
-  return reserved.test(name) ? `${name}0` : name;
+  return reserved.test(name2) ? `${name2}0` : name2;
 }
 function escape_unsafe_char(c) {
   return escaped[c] || c;
@@ -1911,19 +1997,19 @@ function check_named_default_separate(actions) {
 }
 async function call_action(event, actions) {
   const url = new URL(event.request.url);
-  let name = "default";
+  let name2 = "default";
   for (const param of url.searchParams) {
     if (param[0].startsWith("/")) {
-      name = param[0].slice(1);
-      if (name === "default") {
+      name2 = param[0].slice(1);
+      if (name2 === "default") {
         throw new Error('Cannot use reserved action name "default"');
       }
       break;
     }
   }
-  const action = actions[name];
+  const action = actions[name2];
   if (!action) {
-    throw new Error(`No action with name '${name}' found`);
+    throw new Error(`No action with name '${name2}' found`);
   }
   if (!is_form_content_type(event.request)) {
     throw new Error(
@@ -3587,14 +3673,14 @@ function get_cookies(request, url, trailing_slash) {
      * @param {string} name
      * @param {import('cookie').CookieParseOptions} opts
      */
-    get(name, opts) {
-      const c = new_cookies[name];
+    get(name2, opts) {
+      const c = new_cookies[name2];
       if (c && domain_matches(url.hostname, c.options.domain) && path_matches(url.pathname, c.options.path)) {
         return c.value;
       }
       const decoder = opts?.decode || decodeURIComponent;
       const req_cookies = (0, import_cookie.parse)(header, { decode: decoder });
-      const cookie = req_cookies[name];
+      const cookie = req_cookies[name2];
       return cookie;
     },
     /**
@@ -3608,22 +3694,22 @@ function get_cookies(request, url, trailing_slash) {
           cookies2[c.name] = c.value;
         }
       }
-      return Object.entries(cookies2).map(([name, value]) => ({ name, value }));
+      return Object.entries(cookies2).map(([name2, value]) => ({ name: name2, value }));
     },
     /**
      * @param {string} name
      * @param {string} value
      * @param {import('cookie').CookieSerializeOptions} opts
      */
-    set(name, value, opts = {}) {
-      set_internal(name, value, { ...defaults, ...opts });
+    set(name2, value, opts = {}) {
+      set_internal(name2, value, { ...defaults, ...opts });
     },
     /**
      * @param {string} name
      * @param {import('cookie').CookieSerializeOptions} opts
      */
-    delete(name, opts = {}) {
-      cookies.set(name, "", {
+    delete(name2, opts = {}) {
+      cookies.set(name2, "", {
         ...opts,
         maxAge: 0
       });
@@ -3633,8 +3719,8 @@ function get_cookies(request, url, trailing_slash) {
      * @param {string} value
      * @param {import('cookie').CookieSerializeOptions} opts
      */
-    serialize(name, value, opts) {
-      return (0, import_cookie.serialize)(name, value, {
+    serialize(name2, value, opts) {
+      return (0, import_cookie.serialize)(name2, value, {
         ...defaults,
         ...opts
       });
@@ -3656,16 +3742,16 @@ function get_cookies(request, url, trailing_slash) {
     }
     if (header2) {
       const parsed = (0, import_cookie.parse)(header2, { decode: (value) => value });
-      for (const name in parsed) {
-        combined_cookies[name] = parsed[name];
+      for (const name2 in parsed) {
+        combined_cookies[name2] = parsed[name2];
       }
     }
-    return Object.entries(combined_cookies).map(([name, value]) => `${name}=${value}`).join("; ");
+    return Object.entries(combined_cookies).map(([name2, value]) => `${name2}=${value}`).join("; ");
   }
-  function set_internal(name, value, opts) {
+  function set_internal(name2, value, opts) {
     const path = opts.path ?? default_path;
-    new_cookies[name] = {
-      name,
+    new_cookies[name2] = {
+      name: name2,
       value,
       options: {
         ...opts,
@@ -3693,8 +3779,8 @@ function path_matches(path, constraint) {
 }
 function add_cookies_to_headers(headers, cookies) {
   for (const new_cookie of cookies) {
-    const { name, value, options: options2 } = new_cookie;
-    headers.append("set-cookie", (0, import_cookie.serialize)(name, value, options2));
+    const { name: name2, value, options: options2 } = new_cookie;
+    headers.append("set-cookie", (0, import_cookie.serialize)(name2, value, options2));
   }
 }
 function create_fetch({ event, options: options2, manifest: manifest2, state, get_cookie_header, set_internal }) {
@@ -3769,9 +3855,9 @@ function create_fetch({ event, options: options2, manifest: manifest2, state, ge
         const set_cookie = response.headers.get("set-cookie");
         if (set_cookie) {
           for (const str of set_cookie_parser.splitCookiesString(set_cookie)) {
-            const { name, value, ...options3 } = set_cookie_parser.parseString(str);
+            const { name: name2, value, ...options3 } = set_cookie_parser.parseString(str);
             set_internal(
-              name,
+              name2,
               value,
               /** @type {import('cookie').CookieSerializeOptions} */
               options3
@@ -4283,7 +4369,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak.pdf"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.e36f69b7.js", "app": "_app/immutable/entry/app.3fcb168a.js", "imports": ["_app/immutable/entry/start.e36f69b7.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.ccb8fcfd.js", "_app/immutable/entry/app.3fcb168a.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.4db9eced.js", "app": "_app/immutable/entry/app.9886da39.js", "imports": ["_app/immutable/entry/start.4db9eced.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/singletons.6b735061.js", "_app/immutable/entry/app.9886da39.js", "_app/immutable/chunks/scheduler.c358b412.js", "_app/immutable/chunks/index.8b0acd97.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),

@@ -1,5 +1,7 @@
 <script>
     import Step from "./Step.svelte";
+import { inject } from '@vercel/analytics'
+    inject();
 
  let steps = [
   {
@@ -24,6 +26,7 @@
   },
 ];
 function scrollToTouchSection() {
+
   const touchSection = document.getElementById("touch"); // Get the element with ID "touch"
   if (touchSection) { // Check if the element exists
     touchSection.scrollIntoView({ behavior: "smooth" }); // Scroll to the element smoothly
