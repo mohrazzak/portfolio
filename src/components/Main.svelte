@@ -15,11 +15,11 @@ injectSpeedInsights();
       link:"https://180degreesacademy.net/"
   },
   {
-    name: "Backend Engineer at EasyApp",
+    name: "Backend Engineer at Unifi Solutions",
     icon: "fa-solid fa-list-check",
     description:
-      "Orchestrated Node.js backend for customer-restaurant interactions. Optimized data storage with MongoDB, ensured high availability with Azure, maintained Linux servers, enhanced user engagement with Firebase notifications, and strengthened security with WhatsApp authentication.",
-      link:"https://www.linkedin.com/company/easy-app1/"
+      "Led backend development for hotel management ensuring real-time notifications with Firebase, optimized system performance improving response times and user experience, maintained high server availability and seamless operations, collaborated with teams to design and launch new features, and enhanced security with robust authentication mechanisms.",
+      link:"https://www.unifi.solutions"
   },
   {
     name: "QBite eMenu System (CEO & Backend Engineer)",
