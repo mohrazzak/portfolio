@@ -15,7 +15,7 @@ injectSpeedInsights();
       link:"https://180degreesacademy.net/"
   },
   {
-    name: "Backend Engineer at Unifi Solutions",
+    name: "Software Engineer at Unifi Solutions",
     icon: "fa-solid fa-list-check",
     description:
       "Led backend development for hotel management ensuring real-time notifications with Firebase, optimized system performance improving response times and user experience, maintained high server availability and seamless operations, collaborated with teams to design and launch new features, and enhanced security with robust authentication mechanisms.",
