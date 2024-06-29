@@ -606,7 +606,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.a845cc55.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/stores.2e85843d.js", "_app/immutable/chunks/singletons.a40a8109.js"];
+    imports2 = ["_app/immutable/nodes/1.cff605d5.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/stores.6a79c75f.js", "_app/immutable/chunks/singletons.7ce1b3a7.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -723,10 +723,10 @@ var init_page_svelte = __esm({
           link: "https://180degreesacademy.net/"
         },
         {
-          name: "Backend Engineer at EasyApp",
+          name: "Backend Engineer at Unifi Solutions",
           icon: "fa-solid fa-list-check",
-          description: "Orchestrated Node.js backend for customer-restaurant interactions. Optimized data storage with MongoDB, ensured high availability with Azure, maintained Linux servers, enhanced user engagement with Firebase notifications, and strengthened security with WhatsApp authentication.",
-          link: "https://www.linkedin.com/company/easy-app1/"
+          description: "Led backend development for hotel management ensuring real-time notifications with Firebase, optimized system performance improving response times and user experience, maintained high server availability and seamless operations, collaborated with teams to design and launch new features, and enhanced security with robust authentication mechanisms.",
+          link: "https://www.unifi.solutions"
         },
         {
           name: "QBite eMenu System (CEO & Backend Engineer)",
@@ -790,7 +790,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.5d2d1e2e.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.2e85843d.js", "_app/immutable/chunks/singletons.a40a8109.js"];
+    imports3 = ["_app/immutable/nodes/2.4055375d.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.6a79c75f.js", "_app/immutable/chunks/singletons.7ce1b3a7.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -972,7 +972,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1nmeke2"
+  version_hash: "17ozxav"
 };
 function get_hooks() {
   return {};
@@ -4370,7 +4370,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak.pdf"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.f350e6a1.js", "app": "_app/immutable/entry/app.ea011151.js", "imports": ["_app/immutable/entry/start.f350e6a1.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.a40a8109.js", "_app/immutable/entry/app.ea011151.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.2ec771d7.js", "app": "_app/immutable/entry/app.14892a9f.js", "imports": ["_app/immutable/entry/start.2ec771d7.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.7ce1b3a7.js", "_app/immutable/entry/app.14892a9f.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
