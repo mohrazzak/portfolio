@@ -606,7 +606,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.ed4e05a8.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/stores.d1098c99.js", "_app/immutable/chunks/singletons.974ea5a9.js"];
+    imports2 = ["_app/immutable/nodes/1.fa416bd2.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/stores.ba2322bc.js", "_app/immutable/chunks/singletons.554e3af5.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -760,7 +760,11 @@ var init_page_svelte = __esm({
         }
       })} ${validate_component(Step, "Step").$$render($$result, { step: steps[1] }, {}, {
         default: () => {
-          return `<p data-svelte-h="svelte-14nyvzo">Orchestrated <strong class="text-violet-400">Node.js</strong> backend for customer-restaurant interactions. Optimized data storage with Orchestrated <strong class="text-violet-400">MongoDB</strong>, ensured high availability with Orchestrated <strong class="text-violet-400">Azure</strong>, maintained Orchestrated <strong class="text-violet-400">Linux servers</strong>, enhanced user engagement with Orchestrated <strong class="text-violet-400">Firebase notifications</strong>, and strengthened security with Orchestrated <strong class="text-violet-400">WhatsApp authentication.</strong></p>`;
+          return `<p data-svelte-h="svelte-1m87dat">Led backend development for hotel management, ensuring real-time notifications with Firebase.
+Optimized system performance, improving response times by 30% and enhancing user experience.
+Maintained high server availability, achieving 99.9% uptime and seamless operations.
+Collaborated with cross-functional teams to design and launch new features.
+Enhanced security with robust authentication mechanisms, increasing data protection by 40%.</p>`;
         }
       })} ${validate_component(Step, "Step").$$render($$result, { step: steps[2] }, {}, {
         default: () => {
@@ -790,7 +794,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.a4cbcb12.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.d1098c99.js", "_app/immutable/chunks/singletons.974ea5a9.js"];
+    imports3 = ["_app/immutable/nodes/2.1e90b8d8.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.ba2322bc.js", "_app/immutable/chunks/singletons.554e3af5.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -972,7 +976,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "8onx81"
+  version_hash: "1dafp30"
 };
 function get_hooks() {
   return {};
@@ -4370,7 +4374,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak.pdf"]),
     mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.ae48a563.js", "app": "_app/immutable/entry/app.a1f32bd6.js", "imports": ["_app/immutable/entry/start.ae48a563.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.974ea5a9.js", "_app/immutable/entry/app.a1f32bd6.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.2933ced2.js", "app": "_app/immutable/entry/app.6590e811.js", "imports": ["_app/immutable/entry/start.2933ced2.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.554e3af5.js", "_app/immutable/entry/app.6590e811.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
