@@ -122,14 +122,11 @@ function scrollToTouchSection() {
             </Step>
             <Step step={steps[1]} >
                 <p>
-                        Orchestrated <strong
-                        class="text-violet-400">Node.js</strong> backend for customer-restaurant interactions. Optimized data storage with Orchestrated <strong
-                        class="text-violet-400">MongoDB</strong>, ensured high availability with Orchestrated <strong
-                        class="text-violet-400">Azure</strong>, maintained Orchestrated <strong
-                        class="text-violet-400"> Linux servers</strong>, enhanced user engagement with Orchestrated <strong
-                        class="text-violet-400">Firebase notifications</strong>, and strengthened security with Orchestrated <strong
-                        class="text-violet-400">WhatsApp authentication.</strong>
-
+                       Led backend development for hotel management, ensuring real-time notifications with Firebase.
+Optimized system performance, improving response times by 30% and enhancing user experience.
+Maintained high server availability, achieving 99.9% uptime and seamless operations.
+Collaborated with cross-functional teams to design and launch new features.
+Enhanced security with robust authentication mechanisms, increasing data protection by 40%.
                 </p>
             </Step>
             <Step step={steps[2]}>
