@@ -5,6 +5,9 @@ var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
 var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __typeError = (msg) => {
+  throw TypeError(msg);
+};
 var __defNormalProp = (obj, key2, value) => key2 in obj ? __defProp(obj, key2, { enumerable: true, configurable: true, writable: true, value }) : obj[key2] = value;
 var __esm = (fn, res) => function __init() {
   return fn && (res = (0, fn[__getOwnPropNames(fn)[0]])(fn = 0)), res;
@@ -32,28 +35,11 @@ var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__ge
   isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
   mod
 ));
-var __publicField = (obj, key2, value) => {
-  __defNormalProp(obj, typeof key2 !== "symbol" ? key2 + "" : key2, value);
-  return value;
-};
-var __accessCheck = (obj, member, msg) => {
-  if (!member.has(obj))
-    throw TypeError("Cannot " + msg);
-};
-var __privateGet = (obj, member, getter) => {
-  __accessCheck(obj, member, "read from private field");
-  return getter ? getter.call(obj) : member.get(obj);
-};
-var __privateAdd = (obj, member, value) => {
-  if (member.has(obj))
-    throw TypeError("Cannot add the same private member more than once");
-  member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
-};
-var __privateSet = (obj, member, value, setter) => {
-  __accessCheck(obj, member, "write to private field");
-  setter ? setter.call(obj, value) : member.set(obj, value);
-  return value;
-};
+var __publicField = (obj, key2, value) => __defNormalProp(obj, typeof key2 !== "symbol" ? key2 + "" : key2, value);
+var __accessCheck = (obj, member, msg) => member.has(obj) || __typeError("Cannot " + msg);
+var __privateGet = (obj, member, getter) => (__accessCheck(obj, member, "read from private field"), getter ? getter.call(obj) : member.get(obj));
+var __privateAdd = (obj, member, value) => member.has(obj) ? __typeError("Cannot add the same private member more than once") : member instanceof WeakSet ? member.add(obj) : member.set(obj, value);
+var __privateSet = (obj, member, value, setter) => (__accessCheck(obj, member, "write to private field"), setter ? setter.call(obj, value) : member.set(obj, value), value);
 
 // .svelte-kit/output/server/chunks/ssr.js
 function noop() {
@@ -175,7 +161,7 @@ function add_attribute(name2, value, boolean) {
 var current_component, ATTR_REGEX, CONTENT_REGEX, missing_component, on_destroy;
 var init_ssr = __esm({
   ".svelte-kit/output/server/chunks/ssr.js"() {
-    ATTR_REGEX = /[&"]/g;
+    ATTR_REGEX = /[&"<]/g;
     CONTENT_REGEX = /[&<]/g;
     missing_component = {
       $$render: () => ""
@@ -370,6 +356,8 @@ var require_set_cookie = __commonJS({
           cookie.httpOnly = true;
         } else if (key2 === "samesite") {
           cookie.sameSite = value2;
+        } else if (key2 === "partitioned") {
+          cookie.partitioned = true;
         } else {
           cookie[key2] = value2;
         }
@@ -547,8 +535,8 @@ var init__ = __esm({
   ".svelte-kit/output/server/nodes/0.js"() {
     index = 0;
     component = async () => component_cache ?? (component_cache = (await Promise.resolve().then(() => (init_layout_svelte(), layout_svelte_exports))).default);
-    imports = ["_app/immutable/nodes/0.caf7acb9.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js"];
-    stylesheets = ["_app/immutable/assets/0.1bb05802.css"];
+    imports = ["_app/immutable/nodes/0.367c693c.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/each.e59479a4.js"];
+    stylesheets = ["_app/immutable/assets/0.384e3f35.css"];
     fonts = [];
   }
 });
@@ -606,7 +594,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.58022644.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/stores.82a39cd2.js", "_app/immutable/chunks/singletons.eb342658.js"];
+    imports2 = ["_app/immutable/nodes/1.820f62aa.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/stores.318202c4.js", "_app/immutable/chunks/singletons.4f45fda3.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -683,7 +671,7 @@ var name, version, initQueue, DEV_SCRIPT_URL, PROD_SCRIPT_URL;
 var init_dist = __esm({
   "node_modules/@vercel/analytics/dist/index.mjs"() {
     name = "@vercel/analytics";
-    version = "1.2.2";
+    version = "1.3.1";
     initQueue = () => {
       if (window.va)
         return;
@@ -723,7 +711,7 @@ var init_page_svelte = __esm({
           link: "https://180degreesacademy.net/"
         },
         {
-          name: "Software Engineer at Unifi Solutions",
+          name: "Former Software Engineer at Unifi Solutions",
           icon: "fa-solid fa-list-check",
           description: "Led backend development for hotel management ensuring real-time notifications with Firebase, optimized system performance improving response times and user experience, maintained high server availability and seamless operations, collaborated with teams to design and launch new features, and enhanced security with robust authentication mechanisms.",
           link: "https://www.unifi.solutions"
@@ -794,7 +782,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.d1a301ee.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.82a39cd2.js", "_app/immutable/chunks/singletons.eb342658.js"];
+    imports3 = ["_app/immutable/nodes/2.e8bb45db.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.318202c4.js", "_app/immutable/chunks/singletons.4f45fda3.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -845,8 +833,10 @@ var Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     $$bindings.data_1(data_1);
   let $$settled;
   let $$rendered;
+  let previous_head = $$result.head;
   do {
     $$settled = true;
+    $$result.head = previous_head;
     {
       stores.page.set(page2);
     }
@@ -902,20 +892,20 @@ var options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n  <head>\r\n    <meta charset="utf-8" />\r\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\r\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\r\n    <link rel="icon" type="image/png" href="' + assets2 + '/favicon.png" />\r\n    <script\r\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\r\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\r\n      crossorigin="anonymous"\r\n      referrerpolicy="no-referrer"\r\n    ><\/script>\r\n    <link\r\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\r\n      rel="stylesheet"\r\n    />\r\n    <link\r\n      rel="stylesheet"\r\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\r\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\r\n      crossorigin="anonymous"\r\n      referrerpolicy="no-referrer"\r\n    />\r\n    <meta name="viewport" content="width=device-width" />\r\n    <title>\r\n      Mohammad Abdalrazzak - Skilled Full Stack Developer | Portfolio\r\n    </title>\r\n    <meta\r\n      name="description"\r\n      content="Hire Mohammad Abdalrazzak, a skilled Full Stack developer. Download his CV, resume, and portfolio to learn more."\r\n    />\r\n\r\n    ' + head + '\r\n  </head>\r\n\r\n  <body\r\n    data-sveltekit-preload-data="hover"\r\n    class="bg-slate-950 text-white relative"\r\n  >\r\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>\r
-\r
-    <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">\r
-      <div id="particles-js" class="absolute inset-0" />\r
-    </div>\r
-    <script>\r
-      particlesJS.load('particles-js', 'assets/particles.json', function () {\r
-        console.log('callback - particles.js config loaded');\r
-      });\r
-    <\/script>\r
-  </body>\r
-</html>\r
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n    <link rel="icon" type="image/png" href="' + assets2 + '/favicon.png" />\n    <script\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    ><\/script>\n    <link\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\n      rel="stylesheet"\n    />\n    <link\n      rel="stylesheet"\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    />\n    <meta name="viewport" content="width=device-width" />\n    <title>\n      Mohammad Abdalrazzak - Skilled Full Stack Developer | Portfolio\n    </title>\n    <meta\n      name="description"\n      content="Hire Mohammad Abdalrazzak, a skilled Full Stack developer. Download his CV, resume, and portfolio to learn more."\n    />\n\n    ' + head + '\n  </head>\n\n  <body\n    data-sveltekit-preload-data="hover"\n    class="bg-slate-950 text-white relative"\n  >\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>
+
+    <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">
+      <div id="particles-js" class="absolute inset-0" />
+    </div>
+    <script>
+      particlesJS.load('particles-js', 'assets/particles.json', function () {
+        console.log('callback - particles.js config loaded');
+      });
+    <\/script>
+  </body>
+</html>
 `,
-    error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
+    error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
 			body {
@@ -924,8 +914,18 @@ var options = {
 				--divider: #ccc;
 				background: var(--bg);
 				color: var(--fg);
-				font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-					Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+				font-family:
+					system-ui,
+					-apple-system,
+					BlinkMacSystemFont,
+					'Segoe UI',
+					Roboto,
+					Oxygen,
+					Ubuntu,
+					Cantarell,
+					'Open Sans',
+					'Helvetica Neue',
+					sans-serif;
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -976,7 +976,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1r6h5f7"
+  version_hash: "1legnyo"
 };
 function get_hooks() {
   return {};
@@ -1268,17 +1268,12 @@ function safe_prop(key2) {
   return /^[_$a-zA-Z][_$a-zA-Z0-9]*$/.test(key2) ? `.${key2}` : `[${escape_unsafe_chars(JSON.stringify(key2))}]`;
 }
 function stringify_primitive(thing) {
-  if (typeof thing === "string")
-    return stringify_string(thing);
-  if (thing === void 0)
-    return "void 0";
-  if (thing === 0 && 1 / thing < 0)
-    return "-0";
+  if (typeof thing === "string") return stringify_string(thing);
+  if (thing === void 0) return "void 0";
+  if (thing === 0 && 1 / thing < 0) return "-0";
   const str = String(thing);
-  if (typeof thing === "number")
-    return str.replace(/^(-)?0\./, "$1.");
-  if (typeof thing === "bigint")
-    return thing + "n";
+  if (typeof thing === "number") return str.replace(/^(-)?0\./, "$1.");
+  if (typeof thing === "bigint") return thing + "n";
   return str;
 }
 
@@ -1304,18 +1299,12 @@ function stringify(value, reducers) {
     if (typeof thing === "function") {
       throw new DevalueError(`Cannot stringify a function`, keys);
     }
-    if (indexes.has(thing))
-      return indexes.get(thing);
-    if (thing === void 0)
-      return UNDEFINED;
-    if (Number.isNaN(thing))
-      return NAN;
-    if (thing === Infinity)
-      return POSITIVE_INFINITY;
-    if (thing === -Infinity)
-      return NEGATIVE_INFINITY;
-    if (thing === 0 && 1 / thing < 0)
-      return NEGATIVE_ZERO;
+    if (indexes.has(thing)) return indexes.get(thing);
+    if (thing === void 0) return UNDEFINED;
+    if (Number.isNaN(thing)) return NAN;
+    if (thing === Infinity) return POSITIVE_INFINITY;
+    if (thing === -Infinity) return NEGATIVE_INFINITY;
+    if (thing === 0 && 1 / thing < 0) return NEGATIVE_ZERO;
     const index5 = p++;
     indexes.set(thing, index5);
     for (const { key: key2, fn } of custom) {
@@ -1340,7 +1329,8 @@ function stringify(value, reducers) {
           str = `["BigInt",${thing}]`;
           break;
         case "Date":
-          str = `["Date","${thing.toISOString()}"]`;
+          const valid = !isNaN(thing.getDate());
+          str = `["Date","${valid ? thing.toISOString() : ""}"]`;
           break;
         case "RegExp":
           const { source, flags } = thing;
@@ -1349,8 +1339,7 @@ function stringify(value, reducers) {
         case "Array":
           str = "[";
           for (let i = 0; i < thing.length; i += 1) {
-            if (i > 0)
-              str += ",";
+            if (i > 0) str += ",";
             if (i in thing) {
               keys.push(`[${i}]`);
               str += flatten(thing[i]);
@@ -1375,6 +1364,7 @@ function stringify(value, reducers) {
               `.get(${is_primitive(key2) ? stringify_primitive2(key2) : "..."})`
             );
             str += `,${flatten(key2)},${flatten(value2)}`;
+            keys.pop();
           }
           str += "]";
           break;
@@ -1403,8 +1393,7 @@ function stringify(value, reducers) {
             str = "{";
             let started = false;
             for (const key2 in thing) {
-              if (started)
-                str += ",";
+              if (started) str += ",";
               started = true;
               keys.push(`.${key2}`);
               str += `${stringify_string(key2)}:${flatten(thing[key2])}`;
@@ -1418,22 +1407,16 @@ function stringify(value, reducers) {
     return index5;
   }
   const index4 = flatten(value);
-  if (index4 < 0)
-    return `${index4}`;
+  if (index4 < 0) return `${index4}`;
   return `[${stringified.join(",")}]`;
 }
 function stringify_primitive2(thing) {
   const type = typeof thing;
-  if (type === "string")
-    return stringify_string(thing);
-  if (thing instanceof String)
-    return stringify_string(thing.toString());
-  if (thing === void 0)
-    return UNDEFINED.toString();
-  if (thing === 0 && 1 / thing < 0)
-    return NEGATIVE_ZERO.toString();
-  if (type === "bigint")
-    return `["BigInt","${thing}"]`;
+  if (type === "string") return stringify_string(thing);
+  if (thing instanceof String) return stringify_string(thing.toString());
+  if (thing === void 0) return UNDEFINED.toString();
+  if (thing === 0 && 1 / thing < 0) return NEGATIVE_ZERO.toString();
+  if (type === "bigint") return `["BigInt","${thing}"]`;
   return String(thing);
 }
 
@@ -1443,16 +1426,8 @@ var import_cookie = __toESM(require_cookie(), 1);
 var set_cookie_parser = __toESM(require_set_cookie(), 1);
 var DEV = false;
 var SVELTE_KIT_ASSETS = "/_svelte_kit_assets";
-var ENDPOINT_METHODS = /* @__PURE__ */ new Set([
-  "GET",
-  "POST",
-  "PUT",
-  "PATCH",
-  "DELETE",
-  "OPTIONS",
-  "HEAD"
-]);
-var PAGE_METHODS = /* @__PURE__ */ new Set(["GET", "POST", "HEAD"]);
+var ENDPOINT_METHODS = ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS", "HEAD"];
+var PAGE_METHODS = ["GET", "POST", "HEAD"];
 function negotiate(accept, types) {
   const parts = [];
   accept.split(",").forEach((str, i) => {
@@ -1529,6 +1504,16 @@ var Redirect = class {
     this.location = location;
   }
 };
+var NotFound = class extends Error {
+  /**
+   * @param {string} pathname
+   */
+  constructor(pathname) {
+    super();
+    this.status = 404;
+    this.message = `Not found: ${pathname}`;
+  }
+};
 var ActionFailure = class {
   /**
    * @param {number} status
@@ -1542,6 +1527,7 @@ var ActionFailure = class {
 function exec(match, params, matchers) {
   const result = {};
   const values = match.slice(1);
+  const values_needing_match = values.filter((value) => value !== void 0);
   let buffered = 0;
   for (let i = 0; i < params.length; i += 1) {
     const param = params[i];
@@ -1560,6 +1546,9 @@ function exec(match, params, matchers) {
       const next_param = params[i + 1];
       const next_value = values[i + 1];
       if (next_param && !next_param.rest && next_param.optional && next_value && param.chained) {
+        buffered = 0;
+      }
+      if (!next_param && !next_value && Object.keys(result).length === values_needing_match.length) {
         buffered = 0;
       }
       continue;
@@ -1635,7 +1624,7 @@ function method_not_allowed(mod, method) {
   });
 }
 function allowed_methods(mod) {
-  const allowed = Array.from(ENDPOINT_METHODS).filter((method) => method in mod);
+  const allowed = ENDPOINT_METHODS.filter((method) => method in mod);
   if ("GET" in mod || "HEAD" in mod)
     allowed.push("HEAD");
   return allowed;
@@ -1665,11 +1654,10 @@ async function handle_fatal_error(event, options2, error2) {
 async function handle_error_and_jsonify(event, options2, error2) {
   if (error2 instanceof HttpError) {
     return error2.body;
-  } else {
-    return await options2.hooks.handleError({ error: error2, event }) ?? {
-      message: event.route.id != null ? "Internal Error" : "Not Found"
-    };
   }
+  return await options2.hooks.handleError({ error: error2, event }) ?? {
+    message: event.route.id === null && error2 instanceof NotFound ? "Not Found" : "Internal Error"
+  };
 }
 function redirect_response(status, location) {
   const response = new Response(void 0, {
@@ -1703,13 +1691,16 @@ function stringify_uses(node) {
     uses.push('"url":1');
   return `"uses":{${uses.join(",")}}`;
 }
+function warn_with_callsite(message, offset = 0) {
+  console.warn(message);
+}
 async function render_endpoint(event, mod, state) {
   const method = (
     /** @type {import('types').HttpMethod} */
     event.request.method
   );
-  let handler = mod[method];
-  if (!handler && method === "HEAD") {
+  let handler = mod[method] || mod.fallback;
+  if (method === "HEAD" && mod.GET && !mod.HEAD) {
     handler = mod.GET;
   }
   if (!handler) {
@@ -1757,7 +1748,7 @@ async function render_endpoint(event, mod, state) {
 }
 function is_endpoint_request(event) {
   const { method, headers } = event.request;
-  if (ENDPOINT_METHODS.has(method) && !PAGE_METHODS.has(method)) {
+  if (ENDPOINT_METHODS.includes(method) && !PAGE_METHODS.includes(method)) {
     return true;
   }
   if (method === "POST" && headers.get("x-sveltekit-action") === "true")
@@ -1770,6 +1761,33 @@ function compact(arr) {
     /** @returns {val is NonNullable<T>} */
     (val) => val != null
   );
+}
+var SCHEME = /^[a-z][a-z\d+\-.]+:/i;
+var absolute = /^([a-z]+:)?\/?\//;
+function resolve(base2, path) {
+  if (SCHEME.test(path))
+    return path;
+  if (path[0] === "#")
+    return base2 + path;
+  const base_match = absolute.exec(base2);
+  const path_match = absolute.exec(path);
+  if (!base_match) {
+    throw new Error(`bad base path: "${base2}"`);
+  }
+  const baseparts = path_match ? [] : base2.slice(base_match[0].length).split("/");
+  const pathparts = path_match ? path.slice(path_match[0].length).split("/") : path.split("/");
+  baseparts.pop();
+  for (let i = 0; i < pathparts.length; i += 1) {
+    const part = pathparts[i];
+    if (part === ".")
+      continue;
+    else if (part === "..")
+      baseparts.pop();
+    else
+      baseparts.push(part);
+  }
+  const prefix = path_match && path_match[0] || base_match && base_match[0] || "";
+  return `${prefix}${baseparts.join("/")}`;
 }
 function normalize_path(path, trailing_slash) {
   if (path === "/" || trailing_slash === "ignore")
@@ -2046,7 +2064,7 @@ function try_deserialize(data, fn, route_id) {
     throw error2;
   }
 }
-async function unwrap_promises(object) {
+async function unwrap_promises(object, id) {
   for (const key2 in object) {
     if (typeof object[key2]?.then === "function") {
       return Object.fromEntries(
@@ -2121,7 +2139,7 @@ async function load_server_data({
     }),
     url
   });
-  const data = result ? await unwrap_promises(result) : null;
+  const data = result ? await unwrap_promises(result, node.server_id) : null;
   return {
     type: "data",
     data,
@@ -2154,11 +2172,22 @@ async function load_data({
     },
     parent
   });
-  const data = result ? await unwrap_promises(result) : null;
+  const data = result ? await unwrap_promises(result, node.universal_id) : null;
   return data;
 }
+function b64_encode(buffer) {
+  if (globalThis.Buffer) {
+    return Buffer.from(buffer).toString("base64");
+  }
+  const little_endian = new Uint8Array(new Uint16Array([1]).buffer)[0] > 0;
+  return btoa(
+    new TextDecoder(little_endian ? "utf-16le" : "utf-16be").decode(
+      new Uint16Array(new Uint8Array(buffer))
+    )
+  );
+}
 function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
-  return async (input, init2) => {
+  const universal_fetch = async (input, init2) => {
     const cloned_body = input instanceof Request && input.body ? input.clone().body : null;
     const cloned_headers = input instanceof Request && [...input.headers].length ? new Headers(input.headers) : init2?.headers;
     let response = await event.fetch(input, init2);
@@ -2189,31 +2218,25 @@ function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
     }
     const proxy = new Proxy(response, {
       get(response2, key2, _receiver) {
-        async function text2() {
-          const body = await response2.text();
-          if (!body || typeof body === "string") {
-            const status_number = Number(response2.status);
-            if (isNaN(status_number)) {
-              throw new Error(
-                `response.status is not a number. value: "${response2.status}" type: ${typeof response2.status}`
-              );
-            }
-            fetched.push({
-              url: same_origin ? url.href.slice(event.url.origin.length) : url.href,
-              method: event.request.method,
-              request_body: (
-                /** @type {string | ArrayBufferView | undefined} */
-                input instanceof Request && cloned_body ? await stream_to_string(cloned_body) : init2?.body
-              ),
-              request_headers: cloned_headers,
-              response_body: body,
-              response: response2
-            });
+        async function push_fetched(body, is_b64) {
+          const status_number = Number(response2.status);
+          if (isNaN(status_number)) {
+            throw new Error(
+              `response.status is not a number. value: "${response2.status}" type: ${typeof response2.status}`
+            );
           }
-          if (dependency) {
-            dependency.body = body;
-          }
-          return body;
+          fetched.push({
+            url: same_origin ? url.href.slice(event.url.origin.length) : url.href,
+            method: event.request.method,
+            request_body: (
+              /** @type {string | ArrayBufferView | undefined} */
+              input instanceof Request && cloned_body ? await stream_to_string(cloned_body) : init2?.body
+            ),
+            request_headers: cloned_headers,
+            response_body: body,
+            response: response2,
+            is_b64
+          });
         }
         if (key2 === "arrayBuffer") {
           return async () => {
@@ -2221,8 +2244,21 @@ function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
             if (dependency) {
               dependency.body = new Uint8Array(buffer);
             }
+            if (buffer instanceof ArrayBuffer) {
+              await push_fetched(b64_encode(buffer), true);
+            }
             return buffer;
           };
+        }
+        async function text2() {
+          const body = await response2.text();
+          if (!body || typeof body === "string") {
+            await push_fetched(body, false);
+          }
+          if (dependency) {
+            dependency.body = body;
+          }
+          return body;
         }
         if (key2 === "text") {
           return text2;
@@ -2252,6 +2288,12 @@ function create_universal_fetch(event, state, fetched, csr, resolve_opts) {
       };
     }
     return proxy;
+  };
+  return (input, init2) => {
+    const response = universal_fetch(input, init2);
+    response.catch(() => {
+    });
+    return response;
   };
 }
 async function stream_to_string(stream) {
@@ -2384,6 +2426,9 @@ function serialize_data(fetched, filter, prerendering = false) {
     "data-sveltekit-fetched",
     `data-url=${escape_html_attr(fetched.url)}`
   ];
+  if (fetched.is_b64) {
+    attrs.push("data-b64");
+  }
   if (fetched.request_headers || fetched.request_body) {
     const values = [];
     if (fetched.request_headers) {
@@ -2553,19 +2598,19 @@ var BaseProvider = class {
    */
   constructor(use_hashes, directives, nonce) {
     /** @type {boolean} */
-    __privateAdd(this, _use_hashes, void 0);
+    __privateAdd(this, _use_hashes);
     /** @type {boolean} */
-    __privateAdd(this, _script_needs_csp, void 0);
+    __privateAdd(this, _script_needs_csp);
     /** @type {boolean} */
-    __privateAdd(this, _style_needs_csp, void 0);
+    __privateAdd(this, _style_needs_csp);
     /** @type {import('types').CspDirectives} */
-    __privateAdd(this, _directives, void 0);
+    __privateAdd(this, _directives);
     /** @type {import('types').Csp.Source[]} */
-    __privateAdd(this, _script_src, void 0);
+    __privateAdd(this, _script_src);
     /** @type {import('types').Csp.Source[]} */
-    __privateAdd(this, _style_src, void 0);
+    __privateAdd(this, _style_src);
     /** @type {string} */
-    __privateAdd(this, _nonce, void 0);
+    __privateAdd(this, _nonce);
     __privateSet(this, _use_hashes, use_hashes);
     __privateSet(this, _directives, directives);
     const d = __privateGet(this, _directives);
@@ -2679,8 +2724,8 @@ var CspReportOnlyProvider = class extends BaseProvider {
 };
 var Csp = class {
   /**
-   * @param {import('./types').CspConfig} config
-   * @param {import('./types').CspOpts} opts
+   * @param {import('./types.js').CspConfig} config
+   * @param {import('./types.js').CspOpts} opts
    */
   constructor({ mode, directives, reportOnly }, { prerender }) {
     /** @readonly */
@@ -3142,6 +3187,14 @@ async function respond_with_error({
   error: error2,
   resolve_opts
 }) {
+  if (event.request.headers.get("x-sveltekit-error")) {
+    return static_error_page(
+      options2,
+      status,
+      /** @type {Error} */
+      error2.message
+    );
+  }
   const fetched = [];
   try {
     const branch = [];
@@ -3471,7 +3524,7 @@ async function render_page(event, page2, options2, manifest2, state, resolve_opt
     }
     state.prerender_default = should_prerender;
     const fetched = [];
-    if (get_option(nodes, "ssr") === false) {
+    if (get_option(nodes, "ssr") === false && !state.prerendering) {
       return await render_response({
         branch: [],
         fetched,
@@ -3638,7 +3691,7 @@ async function render_page(event, page2, options2, manifest2, state, resolve_opt
       resolve_opts,
       page_config: {
         csr: get_option(nodes, "csr") ?? true,
-        ssr: true
+        ssr: get_option(nodes, "ssr") ?? true
       },
       status,
       error: null,
@@ -3656,6 +3709,20 @@ async function render_page(event, page2, options2, manifest2, state, resolve_opt
       error: e,
       resolve_opts
     });
+  }
+}
+function deprecate_missing_path(opts, method) {
+  if (opts.path === void 0) {
+    warn_with_callsite(
+      `Calling \`cookies.${method}(...)\` without specifying a \`path\` is deprecated, and will be disallowed in SvelteKit 2.0. Relative paths can be used`,
+      1
+    );
+  }
+  if (opts.path === "") {
+    warn_with_callsite(
+      `Calling \`cookies.${method}(...)\` with \`path: ''\` will behave differently in SvelteKit 2.0. Instead of using the browser default behaviour, it will set the cookie path to the current pathname`,
+      1
+    );
   }
 }
 function get_cookies(request, url, trailing_slash) {
@@ -3707,6 +3774,7 @@ function get_cookies(request, url, trailing_slash) {
      * @param {import('cookie').CookieSerializeOptions} opts
      */
     set(name2, value, opts = {}) {
+      deprecate_missing_path(opts, "set");
       set_internal(name2, value, { ...defaults, ...opts });
     },
     /**
@@ -3714,7 +3782,10 @@ function get_cookies(request, url, trailing_slash) {
      * @param {import('cookie').CookieSerializeOptions} opts
      */
     delete(name2, opts = {}) {
+      deprecate_missing_path(opts, "delete");
       cookies.set(name2, "", {
+        path: default_path,
+        // TODO 2.0 remove this
         ...opts,
         maxAge: 0
       });
@@ -3724,7 +3795,8 @@ function get_cookies(request, url, trailing_slash) {
      * @param {string} value
      * @param {import('cookie').CookieSerializeOptions} opts
      */
-    serialize(name2, value, opts) {
+    serialize(name2, value, opts = {}) {
+      deprecate_missing_path(opts, "serialize");
       return (0, import_cookie.serialize)(name2, value, {
         ...defaults,
         ...opts
@@ -3754,7 +3826,15 @@ function get_cookies(request, url, trailing_slash) {
     return Object.entries(combined_cookies).map(([name2, value]) => `${name2}=${value}`).join("; ");
   }
   function set_internal(name2, value, opts) {
-    const path = opts.path ?? default_path;
+    let path = opts.path;
+    if (!opts.domain || opts.domain === url.hostname) {
+      if (path) {
+        if (path[0] === ".")
+          path = resolve(url.pathname, path);
+      } else {
+        path = default_path;
+      }
+    }
     new_cookies[name2] = {
       name: name2,
       value,
@@ -3789,11 +3869,11 @@ function add_cookies_to_headers(headers, cookies) {
   }
 }
 function create_fetch({ event, options: options2, manifest: manifest2, state, get_cookie_header, set_internal }) {
-  return async (info, init2) => {
+  const server_fetch = async (info, init2) => {
     const original_request = normalize_fetch_input(info, init2, event.url);
     let mode = (info instanceof Request ? info.mode : init2?.mode) ?? "cors";
     let credentials = (info instanceof Request ? info.credentials : init2?.credentials) ?? "same-origin";
-    return await options2.hooks.handleFetch({
+    return options2.hooks.handleFetch({
       event,
       request: original_request,
       fetch: async (info2, init3) => {
@@ -3873,6 +3953,12 @@ function create_fetch({ event, options: options2, manifest: manifest2, state, ge
       }
     });
   };
+  return (input, init2) => {
+    const response = server_fetch(input, init2);
+    response.catch(() => {
+    });
+    return response;
+  };
 }
 function normalize_fetch_input(info, init2, url) {
   if (info instanceof Request) {
@@ -3934,6 +4020,7 @@ var valid_server_exports = /* @__PURE__ */ new Set([
   "DELETE",
   "OPTIONS",
   "HEAD",
+  "fallback",
   "prerender",
   "trailingSlash",
   "config",
@@ -4098,7 +4185,7 @@ async function respond(request, options2, manifest2, state) {
       disable_search(url);
     const response = await options2.hooks.handle({
       event,
-      resolve: (event2, opts) => resolve(event2, opts).then((response2) => {
+      resolve: (event2, opts) => resolve2(event2, opts).then((response2) => {
         for (const key2 in headers) {
           const value = headers[key2];
           response2.headers.set(
@@ -4162,7 +4249,7 @@ async function respond(request, options2, manifest2, state) {
     }
     return await handle_fatal_error(event, options2, e);
   }
-  async function resolve(event2, opts) {
+  async function resolve2(event2, opts) {
     try {
       if (opts) {
         if ("ssr" in opts) {
@@ -4252,6 +4339,13 @@ async function respond(request, options2, manifest2, state) {
         }
         return response;
       }
+      if (state.error && event2.isSubRequest) {
+        return await fetch(request, {
+          headers: {
+            "x-sveltekit-error": "true"
+          }
+        });
+      }
       if (state.error) {
         return text("Internal Server Error", {
           status: 500
@@ -4264,7 +4358,7 @@ async function respond(request, options2, manifest2, state) {
           manifest: manifest2,
           state,
           status: 404,
-          error: new Error(`Not found: ${event2.url.pathname}`),
+          error: new NotFound(event2.url.pathname),
           resolve_opts
         });
       }
@@ -4303,9 +4397,9 @@ var Server = class {
   /** @param {import('@sveltejs/kit').SSRManifest} manifest */
   constructor(manifest2) {
     /** @type {import('types').SSROptions} */
-    __privateAdd(this, _options, void 0);
+    __privateAdd(this, _options);
     /** @type {import('@sveltejs/kit').SSRManifest} */
-    __privateAdd(this, _manifest, void 0);
+    __privateAdd(this, _manifest);
     __privateSet(this, _options, options);
     __privateSet(this, _manifest, manifest2);
   }
@@ -4331,7 +4425,7 @@ var Server = class {
       try {
         const module = await get_hooks();
         __privateGet(this, _options).hooks = {
-          handle: module.handle || (({ event, resolve }) => resolve(event)),
+          handle: module.handle || (({ event, resolve: resolve2 }) => resolve2(event)),
           handleError: module.handleError || (({ error: error2 }) => console.error(error2)),
           handleFetch: module.handleFetch || (({ request, fetch: fetch2 }) => fetch2(request))
         };
@@ -4371,10 +4465,10 @@ var manifest = (() => {
   return {
     appDir: "_app",
     appPath: "_app",
-    assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak.pdf"]),
-    mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
+    assets: /* @__PURE__ */ new Set(["Mohammad-Abdalrazzak.pdf", "assets/particles.json", "favicon.png", "images/profile2.png"]),
+    mimeTypes: { ".pdf": "application/pdf", ".json": "application/json", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.08f169c7.js", "app": "_app/immutable/entry/app.5aa3e04e.js", "imports": ["_app/immutable/entry/start.08f169c7.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.eb342658.js", "_app/immutable/entry/app.5aa3e04e.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.8b93b4ad.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.2a375e41.js", "app": "_app/immutable/entry/app.b88d828b.js", "imports": ["_app/immutable/entry/start.2a375e41.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.4f45fda3.js", "_app/immutable/entry/app.b88d828b.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
