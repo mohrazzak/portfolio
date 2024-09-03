@@ -25,7 +25,7 @@ injectSpeedInsights();
     name: "QBite eMenu System (CEO & Backend Engineer)",
     icon: "fa-solid fa-recycle",
     description:
-      "Led the development of an eco-friendly e-menu system replacing paper menus at restaurants. Built with Node.js, NestJS, MySQL, and Prisma. Ensured scalability, multi-language support, and seamless integration with the frontend (q-bite.net).",link:"https://q-bite.net/"
+      "Led the development of an eco-friendly e-menu system replacing paper menus at restaurants. Built with Node.js, NestJS, MySQL, and Prisma. Ensured scalability, multi-language support, and seamless integration with the frontend (q-bite.net) (currently offline).",link:"https://github.com/mohrazzak/qbite"
   },
 ];
 function scrollToTouchSection() {
