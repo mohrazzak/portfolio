@@ -11,7 +11,7 @@ injectSpeedInsights();
     name: "Turkish University Platform (Backend Engineer)",
     icon: "fa-solid fa-university", // Consider an icon representing education
     description:
-      "Built a platform for students in Turkey to search for universities and educational opportunities. Utilized Node.js, MySQL, and Express.js for a dynamic platform with a control panel.",
+      "Built a platform for students in Turkey to search for universities and educational opportunities. Utilized Node.js, MySQL, and Express.js for a dynamic platform with a control panel. (currently offline)",
       link:"https://180degreesacademy.net/"
   },
   {
