@@ -594,7 +594,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.b1595119.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/stores.2c868e35.js", "_app/immutable/chunks/singletons.d38da533.js"];
+    imports2 = ["_app/immutable/nodes/1.15d8f87f.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/stores.01136f54.js", "_app/immutable/chunks/singletons.baeefe95.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -704,13 +704,6 @@ var init_page_svelte = __esm({
       inject({ mode: "production" });
       let steps = [
         {
-          name: "Turkish University Platform (Backend Engineer)",
-          icon: "fa-solid fa-university",
-          // Consider an icon representing education
-          description: "Built a platform for students in Turkey to search for universities and educational opportunities. Utilized Node.js, MySQL, and Express.js for a dynamic platform with a control panel. (currently offline)",
-          link: "https://180degreesacademy.net/"
-        },
-        {
           name: "Former Software Engineer at Unifi Solutions",
           icon: "fa-solid fa-list-check",
           description: "Led backend development for hotel management ensuring real-time notifications with Firebase, optimized system performance improving response times and user experience, maintained high server availability and seamless operations, collaborated with teams to design and launch new features, and enhanced security with robust authentication mechanisms.",
@@ -782,7 +775,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.721bce8b.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.2c868e35.js", "_app/immutable/chunks/singletons.d38da533.js"];
+    imports3 = ["_app/immutable/nodes/2.708dc357.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.01136f54.js", "_app/immutable/chunks/singletons.baeefe95.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -976,7 +969,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "150yten"
+  version_hash: "1ie3g6t"
 };
 function get_hooks() {
   return {};
@@ -4468,7 +4461,7 @@ var manifest = (() => {
     assets: /* @__PURE__ */ new Set(["Mohammad-Abdalrazzak.pdf", "assets/particles.json", "favicon.png", "images/profile2.png"]),
     mimeTypes: { ".pdf": "application/pdf", ".json": "application/json", ".png": "image/png" },
     _: {
-      client: { "start": "_app/immutable/entry/start.0e981c55.js", "app": "_app/immutable/entry/app.b57d3c99.js", "imports": ["_app/immutable/entry/start.0e981c55.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.d38da533.js", "_app/immutable/entry/app.b57d3c99.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.68507859.js", "app": "_app/immutable/entry/app.4cd38e43.js", "imports": ["_app/immutable/entry/start.68507859.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.baeefe95.js", "_app/immutable/entry/app.4cd38e43.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
