@@ -103,7 +103,7 @@ function scrollToTouchSection() {
             </h3>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">
             <Step step={steps[0]}>
 
                 <p>
@@ -123,12 +123,7 @@ Collaborated with cross-functional teams to design and launch new features.
 Enhanced security with robust authentication mechanisms, increasing data protection by 40%.
                 </p>
             </Step>
-            <Step step={steps[2]}>
-                <p>
-                   Led the development of an eco-friendly e-menu system replacing paper menus at restaurants. Built with <strong
-                        class="text-violet-400">Node.js, NestJS, MySQL, and Prisma. </strong>Ensured scalability, multi-language support, and seamless integration with the frontend
-                </p>
-            </Step>
+
         </div>
     </section>
     <section
