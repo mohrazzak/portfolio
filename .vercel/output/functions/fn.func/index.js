@@ -594,7 +594,7 @@ var init__2 = __esm({
   ".svelte-kit/output/server/nodes/1.js"() {
     index2 = 1;
     component2 = async () => component_cache2 ?? (component_cache2 = (await Promise.resolve().then(() => (init_error_svelte(), error_svelte_exports))).default);
-    imports2 = ["_app/immutable/nodes/1.a627e884.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/stores.9b7d28ee.js", "_app/immutable/chunks/singletons.9f05b119.js"];
+    imports2 = ["_app/immutable/nodes/1.8e649f66.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/stores.0f9a5a16.js", "_app/immutable/chunks/singletons.482bbb4e.js"];
     stylesheets2 = [];
     fonts2 = [];
   }
@@ -710,10 +710,16 @@ var init_page_svelte = __esm({
           link: "https://www.unifi.solutions"
         },
         {
-          name: "QBite eMenu System (CEO & Backend Engineer)",
-          icon: "fa-solid fa-recycle",
-          description: "Led the development of an eco-friendly e-menu system replacing paper menus at restaurants. Built with Node.js, NestJS, MySQL, and Prisma. Ensured scalability, multi-language support, and seamless integration with the frontend (q-bite.net) (currently offline).",
-          link: "https://github.com/mohrazzak/qbite"
+          name: "Former Full Stack Developer at EasyApp",
+          icon: "fa-solid fa-list-check",
+          description: "\u2022Developed a Node.js backend, cutting order processing time by 30% and handling 200+ transactions/sec. Improved data retrieval speed by 60% with MongoDB, enhancing user experience. Increased user interaction by 45% with Firebase notifications. Enhanced security with WhatsApp authentication, increasing user trust by 65%.",
+          link: "https://www.linkedin.com/company/easy-app1/"
+        },
+        {
+          name: "Currently Web Developer at Alnukhbeh schools",
+          icon: "fa-solid fa-list-check",
+          description: "\u2022Improved the performance of the internal management system, making it faster and more efficient for daily operations, Built an asset management system from scratch to help with auditing and tracking assets, making the whole process more organized and easier to manage.",
+          link: "https://www.facebook.com/alnukhbefamily"
         }
       ];
       let benefits = [
@@ -731,25 +737,29 @@ var init_page_svelte = __esm({
           description: "The ever-evolving world of technology excites me! I possess a natural curiosity and an insatiable hunger to learn new things. My self-taught journey is a testament to this; I devour online resources, actively seek out learning opportunities, and possess the ability to grasp new concepts quickly. This rapid learning allows me to stay at the forefront of the industry, constantly adapting and growing as a developer."
         }
       ];
-      return `<main class="flex flex-col flex-1 p-4"><section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"><div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"><h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl" data-svelte-h="svelte-1r5k39a">Hi! I&#39;m<br> <span class="poppins text-violet-400">Mohammad</span> Abdalrazzak
-                <br>Full Stack
-                <h1><span class="poppins text-violet-400 m-0 p-0">Mohammad</span> Abdalrazzak</h1> <br>Full Stack
-                <span class="poppins text-violet-400">Developer</span></h2> <p class="text-base sm:text-lg md:text-xl" data-svelte-h="svelte-gyfurs">My <span class="text-violet-400">favorite tech</span> includes TypeScript
-                (Nest.js or Express.js), Node.js &amp; (React or SvelteKit) &amp; MySQL &amp; Prisma!</p> <button id="contact-button" class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950" data-svelte-h="svelte-1hw08sk"><div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div> <h4 class="relative z-9">Get in touch \u2192</h4></button></div> <div class="relative shadow-2xl place-items-center hidden md:grid" data-svelte-h="svelte-z56jiu"><img${add_attribute("src", "images/profile2.png", 0)} alt="Portrait of Mohammad Abdalrazzak smiling" class="object-cover z-[2] max-h-[65vh] "${add_attribute("srcset", "images/profile2.png 1280w", 0)} loading="lazy" decoding="async"></div></section> <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects"><div class="flex flex-col gap-2 text-center" data-svelte-h="svelte-ilbkv3"><h6 class="text-large sm:text-xl md:text-2xl">A few of my creative endeavors.</h6> <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Curious to <span class="poppins text-violet-400">see</span> my work?</h3></div> <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">${validate_component(Step, "Step").$$render($$result, { step: steps[0] }, {}, {
+      return `<main class="flex flex-col flex-1 p-4"><section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14"><div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10"><h2 class="font-semibold text-4xl sm:text-3xl md:text-5xl" data-svelte-h="svelte-1ysly7y">Hi! I&#39;m<br> <span class="poppins text-violet-400">Mohammad</span>
+        Abdalrazzak
+        <br>Full Stack
+        <h1><span class="poppins text-violet-400 m-0 p-0">Mohammad</span> Abdalrazzak</h1> <br>Full Stack
+        <span class="poppins text-violet-400">Developer</span></h2> <p class="text-base sm:text-lg md:text-xl" data-svelte-h="svelte-1lvidc8">My <span class="text-violet-400">favorite tech</span> includes TypeScript
+        (Nest.js or Express.js), Node.js &amp; (React or SvelteKit) &amp; MySQL &amp; Prisma!</p> <button id="contact-button" class="blueShadow mx-auto lg:mr-auto lg:ml-0 text-base sm:text-lg md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-white text-slate-950" data-svelte-h="svelte-15lhmbq"><div class="absolute top-0 right-full w-full h-full bg-violet-400 opacity-20 group-hover:translate-x-full z-0 duration-200"></div> <h4 class="relative z-9">Get in touch \u2192</h4></button></div> <div class="relative shadow-2xl place-items-center hidden md:grid" data-svelte-h="svelte-1nn0k9y"><img${add_attribute("src", "images/profile2.png", 0)} alt="Portrait of Mohammad Abdalrazzak smiling" class="object-cover z-[2] max-h-[65vh]"${add_attribute("srcset", "images/profile2.png 1280w", 0)} loading="lazy" decoding="async"></div></section> <section class="py-20 lg:py-32 flex flex-col gap-24" id="projects"><div class="flex flex-col gap-2 text-center" data-svelte-h="svelte-eo9wtr"><h6 class="text-large sm:text-xl md:text-2xl">A few of my creative endeavors.</h6> <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">Curious to <span class="poppins text-violet-400">see</span> my expertise?</h3></div> <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-10">${validate_component(Step, "Step").$$render($$result, { step: steps[0] }, {}, {
         default: () => {
-          return `<p data-svelte-h="svelte-1j2kp3q">Built a platform for students in Turkey to search for universities and educational opportunities. Utilized <strong class="text-violet-400">Node.js , MySQL, and Express.js</strong> for a dynamic platform with a control panel (180degreesacademy.net).</p>`;
+          return `<p data-svelte-h="svelte-v2hm1i">Built a platform for students in Turkey to search for universities and
+          educational opportunities. Utilized <strong class="text-violet-400">Node.js , MySQL, and Express.js</strong> for a dynamic platform with a control panel (180degreesacademy.net).</p>`;
         }
       })} ${validate_component(Step, "Step").$$render($$result, { step: steps[1] }, {}, {
         default: () => {
-          return `<p data-svelte-h="svelte-1m87dat">Led backend development for hotel management, ensuring real-time notifications with Firebase.
-Optimized system performance, improving response times by 30% and enhancing user experience.
-Maintained high server availability, achieving 99.9% uptime and seamless operations.
-Collaborated with cross-functional teams to design and launch new features.
-Enhanced security with robust authentication mechanisms, increasing data protection by 40%.</p>`;
+          return `<p data-svelte-h="svelte-y5mgb3">Led backend development for hotel management, ensuring real-time
+          notifications with Firebase. Optimized system performance, improving
+          response times by 30% and enhancing user experience. Maintained high
+          server availability, achieving 99.9% uptime and seamless operations.
+          Collaborated with cross-functional teams to design and launch new
+          features. Enhanced security with robust authentication mechanisms,
+          increasing data protection by 40%.</p>`;
         }
-      })}</div></section> <section id="about" class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"><div class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-4" data-svelte-h="svelte-1v5l3ql"><h6 class="text-large sm:text-xl md:text-2xl">Want to know more?</h6> <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">A bit <span class="poppins text-violet-400">about</span> me.</h3></div> <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl" data-svelte-h="svelte-1q8im4p">I am . . .</p> <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">${each(benefits, (benefit, index4) => {
+      })}</div></section> <section id="about" class="py-20 pt-10 lg:pt-16 lg:py-32 flex flex-col gap-16 sm:gap-20 md:gap-24 relative"><div class="flex flex-col gap-2 text-center relative before:absolute before:top-0 before:left-0 before:w-2/3 before:h-1.5 before:bg-violet-700 after:absolute after:bottom-0 after:right-0 after:w-2/3 after:h-1.5 after:bg-violet-700 py-4" data-svelte-h="svelte-1r4im4x"><h6 class="text-large sm:text-xl md:text-2xl">Want to know more?</h6> <h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl">A bit <span class="poppins text-violet-400">about</span> me.</h3></div> <p class="mx-auto poppins font-semibold text-lg sm:text-xl md:text-2xl" data-svelte-h="svelte-1xbwjyh">I am . . .</p> <div class="flex flex-col gap-20 w-full mx-auto max-w-[800px]">${each(benefits, (benefit, index4) => {
         return ` <div class="flex gap-6 sm:gap-8"><p class="poppins text-4xl sm:text-5xl md:text-6xl text-slate-500 font-semibold">0${escape(index4 + 1)}</p> <div class="flex flex-col gap-6 sm:gap-8"><h3 class="text-2xl sm:text-3xl md:text-5xl">${escape(benefit.name)}</h3> <p>${escape(benefit.description)}</p></div> </div>`;
-      })}</div> <h5${add_attribute("class", " text-2xl sm:text-3xl font-semibold text-center poppins ", 0)} data-svelte-h="svelte-11psba3">The <span class="text-violet-400">Complete</span> Package</h5> <div class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full" data-svelte-h="svelte-1hp7xmr"><table class="bg-white text-slate-700 rounded text-center"><thead${add_attribute("class", "border-b border-solid border-slate-200  ", 0)}><tr class=""><th></th> <th class="whitespace-nowrap p-2 px-4">Candidate #1</th> <th class="whitespace-nowrap p-2 px-4">Candidate #2</th> <th class="whitespace-nowrap p-2 px-4">Candidate #3</th> <th class="bg-violet-700 text-white whitespace-nowrap p-4 px-8">Me</th></tr></thead> <tbody><tr class="border-b border-solid border-slate-200"><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Dedication</td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr> <tr class="border-b border-solid border-slate-200"><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Critical Thought</td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr> <tr><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Interpersonal Skills</td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr> <tr class="border-t border-solid border-slate-200"><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Progamming Ability</td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr></tbody></table></div> <div class="mx-auto -mt-12 italic sm:hidden opacity-50" data-svelte-h="svelte-zp0ubu"><p>Scroll to see more \u2192</p></div> <p class="mx-auto" data-svelte-h="svelte-g5q3n9">So why not invest?</p></section></main>`;
+      })}</div> <h5${add_attribute("class", " text-2xl sm:text-3xl font-semibold text-center poppins ", 0)} data-svelte-h="svelte-biz0fh">The <span class="text-violet-400">Complete</span> Package</h5> <div class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full" data-svelte-h="svelte-145pobv"><table class="bg-white text-slate-700 rounded text-center"><thead${add_attribute("class", "border-b border-solid border-slate-200  ", 0)}><tr class=""><th></th> <th class="whitespace-nowrap p-2 px-4">Candidate #1</th> <th class="whitespace-nowrap p-2 px-4">Candidate #2</th> <th class="whitespace-nowrap p-2 px-4">Candidate #3</th> <th class="bg-violet-700 text-white whitespace-nowrap p-4 px-8">Me</th></tr></thead> <tbody><tr class="border-b border-solid border-slate-200"><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Dedication</td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr> <tr class="border-b border-solid border-slate-200"><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Critical Thought</td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr> <tr><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Interpersonal Skills</td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr> <tr class="border-t border-solid border-slate-200"><td class="border-r border-solid border-white pl-4 pr-8 py-4 font-semibold text-sm">Progamming Ability</td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-xmark text-slate-500"></i></td> <td><i class="fa-solid fa-check text-slate-500"></i></td> <td><i class="fa-solid fa-check text-green-500"></i></td></tr></tbody></table></div> <div class="mx-auto -mt-12 italic sm:hidden opacity-50" data-svelte-h="svelte-1fnroui"><p>Scroll to see more \u2192</p></div> <p class="mx-auto" data-svelte-h="svelte-g5q3n9">So why not invest?</p></section></main>`;
     });
     Page = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       return `${validate_component(Main, "Main").$$render($$result, {}, {}, {})}`;
@@ -771,7 +781,7 @@ var init__3 = __esm({
   ".svelte-kit/output/server/nodes/2.js"() {
     index3 = 2;
     component3 = async () => component_cache3 ?? (component_cache3 = (await Promise.resolve().then(() => (init_page_svelte(), page_svelte_exports))).default);
-    imports3 = ["_app/immutable/nodes/2.dfb26153.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.9b7d28ee.js", "_app/immutable/chunks/singletons.9f05b119.js"];
+    imports3 = ["_app/immutable/nodes/2.48976306.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js", "_app/immutable/chunks/each.e59479a4.js", "_app/immutable/chunks/stores.0f9a5a16.js", "_app/immutable/chunks/singletons.482bbb4e.js"];
     stylesheets3 = [];
     fonts3 = [];
   }
@@ -881,18 +891,18 @@ var options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\n<html lang="en">\n  <head>\n    <meta charset="utf-8" />\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\n    <link rel="icon" type="image/png" href="' + assets2 + '/favicon.png" />\n    <script\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    ><\/script>\n    <link\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\n      rel="stylesheet"\n    />\n    <link\n      rel="stylesheet"\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\n      crossorigin="anonymous"\n      referrerpolicy="no-referrer"\n    />\n    <meta name="viewport" content="width=device-width" />\n    <title>\n      Mohammad Abdalrazzak - Skilled Full Stack Developer | Portfolio\n    </title>\n    <meta\n      name="description"\n      content="Hire Mohammad Abdalrazzak, a skilled Full Stack developer. Download his CV, resume, and portfolio to learn more."\n    />\n\n    ' + head + '\n  </head>\n\n  <body\n    data-sveltekit-preload-data="hover"\n    class="bg-slate-950 text-white relative"\n  >\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>
-
-    <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">
-      <div id="particles-js" class="absolute inset-0" />
-    </div>
-    <script>
-      particlesJS.load('particles-js', 'assets/particles.json', function () {
-        console.log('callback - particles.js config loaded');
-      });
-    <\/script>
-  </body>
-</html>
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!DOCTYPE html>\r\n<html lang="en">\r\n  <head>\r\n    <meta charset="utf-8" />\r\n    <link rel="preconnect" href="https://fonts.googleapis.com" />\r\n    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />\r\n    <link rel="icon" type="image/png" href="' + assets2 + '/favicon.png" />\r\n    <script\r\n      src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"\r\n      integrity="sha512-Kef5sc7gfTacR7TZKelcrRs15ipf7+t+n7Zh6mKNJbmW+/RRdCW9nwfLn4YX0s2nO6Kv5Y2ChqgIakaC6PW09A=="\r\n      crossorigin="anonymous"\r\n      referrerpolicy="no-referrer"\r\n    ><\/script>\r\n    <link\r\n      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap"\r\n      rel="stylesheet"\r\n    />\r\n    <link\r\n      rel="stylesheet"\r\n      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"\r\n      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="\r\n      crossorigin="anonymous"\r\n      referrerpolicy="no-referrer"\r\n    />\r\n    <meta name="viewport" content="width=device-width" />\r\n    <title>\r\n      Mohammad Abdalrazzak - Skilled Full Stack Developer | Portfolio\r\n    </title>\r\n    <meta\r\n      name="description"\r\n      content="Hire Mohammad Abdalrazzak, a skilled Full Stack developer. Download his CV, resume, and portfolio to learn more."\r\n    />\r\n\r\n    ' + head + '\r\n  </head>\r\n\r\n  <body\r\n    data-sveltekit-preload-data="hover"\r\n    class="bg-slate-950 text-white relative"\r\n  >\r\n    <div style="display: contents" class="relative z-[1]">' + body + `</div>\r
+\r
+    <div class="absolute min-h-screen top-0 left-0 w-full z-[-1] opacity-70">\r
+      <div id="particles-js" class="absolute inset-0" />\r
+    </div>\r
+    <script>\r
+      particlesJS.load('particles-js', 'assets/particles.json', function () {\r
+        console.log('callback - particles.js config loaded');\r
+      });\r
+    <\/script>\r
+  </body>\r
+</html>\r
 `,
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
@@ -965,7 +975,7 @@ var options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "1khhth4"
+  version_hash: "3us6t3"
 };
 function get_hooks() {
   return {};
@@ -4454,10 +4464,10 @@ var manifest = (() => {
   return {
     appDir: "_app",
     appPath: "_app",
-    assets: /* @__PURE__ */ new Set(["Mohammad-Abdalrazzak.pdf", "assets/particles.json", "favicon.png", "images/profile2.png"]),
-    mimeTypes: { ".pdf": "application/pdf", ".json": "application/json", ".png": "image/png" },
+    assets: /* @__PURE__ */ new Set(["assets/particles.json", "favicon.png", "images/profile2.png", "Mohammad-Abdalrazzak.pdf"]),
+    mimeTypes: { ".json": "application/json", ".png": "image/png", ".pdf": "application/pdf" },
     _: {
-      client: { "start": "_app/immutable/entry/start.8656c0a4.js", "app": "_app/immutable/entry/app.c5138a07.js", "imports": ["_app/immutable/entry/start.8656c0a4.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.9f05b119.js", "_app/immutable/entry/app.c5138a07.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js"], "stylesheets": [], "fonts": [] },
+      client: { "start": "_app/immutable/entry/start.af4d2ee2.js", "app": "_app/immutable/entry/app.6c59355d.js", "imports": ["_app/immutable/entry/start.af4d2ee2.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/singletons.482bbb4e.js", "_app/immutable/entry/app.6c59355d.js", "_app/immutable/chunks/scheduler.08c5ae93.js", "_app/immutable/chunks/index.41d26edb.js"], "stylesheets": [], "fonts": [] },
       nodes: [
         __memo(() => Promise.resolve().then(() => (init__(), __exports))),
         __memo(() => Promise.resolve().then(() => (init__2(), __exports2))),
